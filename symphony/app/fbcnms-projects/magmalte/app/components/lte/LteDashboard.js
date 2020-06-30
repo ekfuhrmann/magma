@@ -59,6 +59,9 @@ const useStyles = makeStyles(theme => ({
   input: {
     color: colors.primary.white,
     backgroundColor: colors.primary.comet,
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+    height: '100%',
   },
   dateTimeText: {
     color: colors.primary.selago,
@@ -113,6 +116,7 @@ function LteDashboard() {
               </Grid>
               <DateTimePicker
                 autoOk
+                variant="inline"
                 inputVariant="outlined"
                 maxDate={endDate}
                 disableFuture
