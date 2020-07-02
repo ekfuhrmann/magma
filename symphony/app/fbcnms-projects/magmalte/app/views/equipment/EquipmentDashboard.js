@@ -83,19 +83,6 @@ const useStyles = makeStyles(theme => ({
   appBarBtnSecondary: {
     color: colors.primary.white,
   },
-  // TODO: remove this when we actually fill out the grid sections
-  contentPlaceholder: {
-    padding: '50px 0',
-  },
-  paper: {
-    height: 100,
-    padding: theme.spacing(10),
-    textAlign: 'center',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
 }));
 
 function EquipmentDashboard() {
