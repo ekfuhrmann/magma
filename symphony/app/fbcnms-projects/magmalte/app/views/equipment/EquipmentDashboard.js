@@ -39,10 +39,6 @@ import {useEnqueueSnackbar} from '@fbcnms/ui/hooks/useSnackbar';
 import {useRouter} from '@fbcnms/ui/hooks';
 
 const useStyles = makeStyles(theme => ({
-  dashboardRoot: {
-    margin: theme.spacing(3),
-    flexGrow: 1,
-  },
   topBar: {
     backgroundColor: colors.primary.mirage,
     padding: '20px 40px 20px 40px',
