@@ -8,8 +8,8 @@
  * @flow strict-local
  * @format
  */
-import type {subscriber} from '../../../../../fbcnms-packages/fbcnms-magma-api';
 import type {KPIRows} from '../../components/KPIGrid';
+import type {subscriber} from '../../../../../fbcnms-packages/fbcnms-magma-api';
 
 import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -32,8 +32,8 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import Text from '../../theme/design-system/Text';
 import TextField from '@material-ui/core/TextField';
 
-import {colors, typography} from '../../theme/default';
 import {CardTitleFilterRow} from '../../components/layout/CardTitleRow';
+import {colors, typography} from '../../theme/default';
 import {makeStyles} from '@material-ui/styles';
 import {useState} from 'react';
 
@@ -42,21 +42,8 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3),
     flexGrow: 1,
   },
-  kpiHeaderBlock: {
-    display: 'flex',
-    alignItems: 'center',
+  list: {
     padding: 0,
-  },
-  kpiHeaderContent: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  kpiHeaderIcon: {
-    fill: colors.primary.comet,
-    marginRight: theme.spacing(1),
-  },
-  kpiBlock: {
-    boxShadow: `0 0 0 1px ${colors.primary.concrete}`,
   },
   kpiLabel: {
     color: colors.primary.comet,
@@ -73,6 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
   kpiBox: {
     width: '100%',
+    padding: 0,
     '& > div': {
       width: '100%',
     },
@@ -137,9 +125,9 @@ function SubscriberConfigTrafficPolicy({
   readOnly: boolean,
 }) {
   const [open, setOpen] = useState({
-    activeAPN: true,
-    baseNames: true,
-    activePolicies: true,
+    activeAPN: false,
+    baseNames: false,
+    activePolicies: false,
   });
   const handleCollapse = (config: string) => {
     setOpen({
@@ -149,14 +137,51 @@ function SubscriberConfigTrafficPolicy({
   };
   const classes = useStyles();
 
+  function ListItems(props) {
+    return (
+      <>
+        <ListItem>
+          <ListItemText
+            primary={props.data}
+            primaryTypographyProps={{variant: 'body3'}}
+          />
+        </ListItem>
+        <Divider />
+      </>
+    );
+  }
+
+  function ListNull() {
+    return (
+      <>
+        <ListItem>
+          <ListItemText
+            primary="-"
+            primaryTypographyProps={{variant: 'body3'}}
+          />
+        </ListItem>
+        <Divider />
+      </>
+    );
+  }
+
   return (
-    <List component={Paper} elevation={0}>
+    <List component={Paper} elevation={0} className={classes.list}>
       <ListItem button onClick={() => handleCollapse('activeAPN')}>
-        <TextField
-          fullWidth={true}
-          value={subscriberInfo.active_apns?.length || 0}
-          label="Active APNs"
-          InputProps={{disableUnderline: true, readOnly: readOnly}}
+        <CardHeader
+          title="Active APNs"
+          className={classes.kpiBox}
+          subheader={subscriberInfo.active_apns?.length || 0}
+          titleTypographyProps={{
+            variant: 'body3',
+            className: classes.kpiLabel,
+            title: 'Active APNs',
+          }}
+          subheaderTypographyProps={{
+            variant: 'body1',
+            className: classes.kpiValue,
+            title: subscriberInfo.active_apns?.length || 0,
+          }}
         />
         {open['activeAPN'] ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
@@ -166,24 +191,25 @@ function SubscriberConfigTrafficPolicy({
         in={open['activeAPN']}
         timeout="auto"
         unmountOnExit>
-        {subscriberInfo.active_apns?.map(data => (
-          <>
-            <ListItem>
-              <ListItemText
-                primary={data}
-                primaryTypographyProps={{variant: 'body3'}}
-              />
-            </ListItem>
-            <Divider />
-          </>
-        )) || null}
+        {subscriberInfo.active_apns?.map(data => <ListItems data={data} />) || (
+          <ListNull />
+        )}
       </Collapse>
       <ListItem button onClick={() => handleCollapse('baseNames')}>
-        <TextField
-          fullWidth={true}
-          value={subscriberInfo.active_base_names?.length || 0}
-          label="Base Names"
-          InputProps={{disableUnderline: true, readOnly: readOnly}}
+        <CardHeader
+          title="Base Names"
+          className={classes.kpiBox}
+          subheader={subscriberInfo.active_base_names?.length || 0}
+          titleTypographyProps={{
+            variant: 'body3',
+            className: classes.kpiLabel,
+            title: 'Base Names',
+          }}
+          subheaderTypographyProps={{
+            variant: 'body1',
+            className: classes.kpiValue,
+            title: subscriberInfo.active_base_names?.length || 0,
+          }}
         />
         {open['baseNames'] ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
@@ -193,36 +219,37 @@ function SubscriberConfigTrafficPolicy({
         in={open['baseNames']}
         timeout="auto"
         unmountOnExit>
-        <ListItem>
-          <TextField
-            fullWidth={true}
-            value={subscriberInfo.active_base_names?.join(', ') || 0}
-            InputProps={{disableUnderline: true, readOnly: readOnly}}
-          />
-        </ListItem>
-        <Divider />
+        {subscriberInfo.active_base_names?.map(data => (
+          <ListItems data={data} />
+        )) || <ListNull />}
       </Collapse>
       <ListItem button onClick={() => handleCollapse('activePolicies')}>
-        <TextField
-          fullWidth={true}
-          value={subscriberInfo.active_policies?.length || 0}
-          label="Active Policies"
-          InputProps={{disableUnderline: true, readOnly: readOnly}}
+        <CardHeader
+          title="Active Policies"
+          className={classes.kpiBox}
+          subheader={subscriberInfo.active_policies?.length || 0}
+          titleTypographyProps={{
+            variant: 'body3',
+            className: classes.kpiLabel,
+            title: 'Active Policies',
+          }}
+          subheaderTypographyProps={{
+            variant: 'body1',
+            className: classes.kpiValue,
+            title: subscriberInfo.active_policies?.length || 0,
+          }}
         />
         {open['activePolicies'] ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
+      <Divider />
       <Collapse
         key="activePolicies"
         in={open['activePolicies']}
         timeout="auto"
         unmountOnExit>
-        <ListItem>
-          <TextField
-            fullWidth={true}
-            value={subscriberInfo.active_policies?.join(', ') || 0}
-            InputProps={{disableUnderline: true, readOnly: readOnly}}
-          />
-        </ListItem>
+        {subscriberInfo.active_policies?.map(data => (
+          <ListItems data={data} />
+        )) || <ListNull />}
       </Collapse>
     </List>
   );
