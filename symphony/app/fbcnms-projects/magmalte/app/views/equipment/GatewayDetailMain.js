@@ -36,8 +36,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Text from '../../theme/design-system/Text';
 
 import {CardTitleRow} from '../../components/layout/CardTitleRow';
-import {colors, typography} from '../../theme/default';
-import {makeStyles} from '@material-ui/styles';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import {colors, typography} from '../../theme/default';
 import {makeStyles} from '@material-ui/styles';
