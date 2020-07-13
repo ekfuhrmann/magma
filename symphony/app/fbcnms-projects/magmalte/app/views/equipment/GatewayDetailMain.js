@@ -25,6 +25,7 @@ import Grid from '@material-ui/core/Grid';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import NestedRouteLink from '@fbcnms/ui/components/NestedRouteLink';
+import nullthrows from '@fbcnms/util/nullthrows';
 import Paper from '@material-ui/core/Paper';
 import PeopleIcon from '@material-ui/icons/People';
 import React from 'react';
@@ -33,9 +34,10 @@ import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import Text from '../../theme/design-system/Text';
-import nullthrows from '@fbcnms/util/nullthrows';
 
 import {CardTitleRow} from '../../components/layout/CardTitleRow';
+import {colors, typography} from '../../theme/default';
+import {makeStyles} from '@material-ui/styles';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import {colors, typography} from '../../theme/default';
 import {makeStyles} from '@material-ui/styles';
@@ -216,13 +218,13 @@ function GatewayOverview({gwInfo}: {gwInfo: lte_gateway}) {
   return (
     <div className={classes.dashboardRoot}>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Grid container spacing={4} direction="column">
-            <Grid item xs={12} alignItems="center">
+        <Grid item xs={12}>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={6} alignItems="center">
               <CardTitleRow icon={CellWifiIcon} label={gatewayId} />
               <GatewaySummary gwInfo={gwInfo} />
             </Grid>
-            <Grid item xs={12} alignItems="center">
+            <Grid item xs={12} md={6} alignItems="center">
               <CardTitleRow icon={MyLocationIcon} label="Events" />
               <Paper className={classes.paper} elevation={0}>
                 <Text variant="body2">Event Information</Text>

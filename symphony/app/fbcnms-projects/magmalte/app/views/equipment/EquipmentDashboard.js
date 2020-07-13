@@ -23,12 +23,12 @@ import Grid from '@material-ui/core/Grid';
 import LoadingFiller from '@fbcnms/ui/components/LoadingFiller';
 import MagmaV1API from '@fbcnms/magma-api/client/WebClient';
 import NestedRouteLink from '@fbcnms/ui/components/NestedRouteLink';
+import nullthrows from '@fbcnms/util/nullthrows';
 import React from 'react';
 import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import Text from '../../theme/design-system/Text';
-import nullthrows from '@fbcnms/util/nullthrows';
 import useMagmaAPI from '@fbcnms/ui/magma/useMagmaAPI';
 
 import {Redirect, Route, Switch} from 'react-router-dom';
@@ -39,10 +39,6 @@ import {useEnqueueSnackbar} from '@fbcnms/ui/hooks/useSnackbar';
 import {useRouter} from '@fbcnms/ui/hooks';
 
 const useStyles = makeStyles(theme => ({
-  dashboardRoot: {
-    margin: theme.spacing(3),
-    flexGrow: 1,
-  },
   topBar: {
     backgroundColor: colors.primary.mirage,
     padding: '20px 40px 20px 40px',
@@ -82,19 +78,6 @@ const useStyles = makeStyles(theme => ({
   },
   appBarBtnSecondary: {
     color: colors.primary.white,
-  },
-  // TODO: remove this when we actually fill out the grid sections
-  contentPlaceholder: {
-    padding: '50px 0',
-  },
-  paper: {
-    height: 100,
-    padding: theme.spacing(10),
-    textAlign: 'center',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
   },
 }));
 

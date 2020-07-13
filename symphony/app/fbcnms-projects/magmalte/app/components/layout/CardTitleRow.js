@@ -62,7 +62,7 @@ export const CardTitleFilterRow = (props: CardTitleFilterRowProps) => {
         <Icon className={classes.cardTitleIcon} />
         <Text variant="body1">{props.label}</Text>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item>
         <Filters />
       </Grid>
     </Grid>
