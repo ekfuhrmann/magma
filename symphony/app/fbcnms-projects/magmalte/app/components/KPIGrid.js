@@ -62,7 +62,7 @@ function StatusIndicator(disabled: boolean, up: boolean, val: string) {
   const props = {hasStatus: true};
   const classes = useStyles(props);
   return (
-    <Grid container zeroMinWidth alignItems="center" xs={12}>
+    <Grid container alignItems="center" xs={12}>
       <Grid item>
         <DeviceStatusCircle isGrey={disabled} isActive={up} isFilled={true} />
       </Grid>
