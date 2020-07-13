@@ -19,7 +19,7 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   cardTitleRow: {
-    marginBottom: theme.spacing(1),
+    marginBottom: props => (props.noMargin ? '0' : theme.spacing(1)),
     minHeight: '36px',
   },
   cardTitleIcon: {
@@ -31,10 +31,11 @@ const useStyles = makeStyles(theme => ({
 export type CardTitleRowProps = {
   icon: ComponentType<SvgIconExports>,
   label: string,
+  noMargin: boolean,
 };
 
 export const CardTitleRow = (props: CardTitleRowProps) => {
-  const classes = useStyles();
+  const classes = useStyles(props);
   const Icon = props.icon;
 
   return (
@@ -53,14 +54,16 @@ export type CardTitleFilterRowProps = {
 
 export const CardTitleFilterRow = (props: CardTitleFilterRowProps) => {
   const classes = useStyles();
-  const Icon = props.icon;
   const Filters = props.filter;
 
   return (
-    <Grid container alignItems="center" className={classes.cardTitleRow}>
-      <Grid item xs={6}>
-        <Icon className={classes.cardTitleIcon} />
-        <Text variant="body1">{props.label}</Text>
+    <Grid
+      container
+      alignItems="center"
+      justify="space-between"
+      className={classes.cardTitleRow}>
+      <Grid item>
+        <CardTitleRow icon={props.icon} label={props.label} noMargin={true} />
       </Grid>
       <Grid item>
         <Filters />
