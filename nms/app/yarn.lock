@@ -1241,10 +1241,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
-  integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.13.6", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+  version "7.13.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.6.tgz#86e0fad6cbb46a680e21c1aa4748717a058d345a"
+  integrity sha512-Y/DEVhSQ91u27rxq7D0EH/sewS6+x06p/MgO1VppbDHMzYXLZrAR5cFjCom78e9RUw1BQAq6qJg6fXc/ep7glA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1564,10 +1564,10 @@
     morgan "^1.9.1"
     winston "^3.0.0"
 
-"@fbcnms/platform-server@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@fbcnms/platform-server/-/platform-server-0.1.9.tgz#c5d0c44b3e0ce2437781c2209253ba52dca9de1d"
-  integrity sha512-o3H6eDTBcDuAoK0xUfQUM8O4UHnzxzajbt6w399CEQOpsAmjIwtwQ5xXP5XoeTG/Eb1EOHdE8vSnhvncfY3Psg==
+"@fbcnms/platform-server@^0.1.10":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@fbcnms/platform-server/-/platform-server-0.1.24.tgz#ab28f9d01d59ebcd518cbbb9f6cd92dcaaee219e"
+  integrity sha512-jjdYRiEKae8QpC85DkQdHhqBbyT8sqs2Jlp0f+DEMnBZP2MoW2jgvIRbpjOyVFhHzhGjsi4yfL36cLbLi2Fxfg==
   dependencies:
     "@fbcnms/auth" "^0.1.0"
     "@fbcnms/babel-register" "^0.1.0"
@@ -1575,10 +1575,10 @@
     "@fbcnms/logging" "^0.1.0"
     "@fbcnms/magma-api" "^0.1.0"
     "@fbcnms/sequelize-models" "^0.1.0"
-    "@fbcnms/types" "^0.1.2"
+    "@fbcnms/types" "^0.1.10"
     "@fbcnms/util" "^0.1.0"
     add "^2.0.6"
-    axios "^0.18.0"
+    axios "^0.21.1"
     bcryptjs "^2.4.3"
     connect-session-sequelize "^6.0.0"
     express "^4.16.3"
@@ -1616,15 +1616,15 @@
   resolved "https://registry.yarnpkg.com/@fbcnms/strings/-/strings-0.1.0.tgz#50dae22b4cb7cb7d1a30c013d0b40c96b741a1f1"
   integrity sha512-w1Z12YAhufVCsKL1lcO4+wwfwnQPwaLZyE5jjt36yg/2fcCRrpv55r3V+7M/VDc8wDOK4yRgJwiwEuOPrrwfKw==
 
-"@fbcnms/types@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@fbcnms/types/-/types-0.1.2.tgz#db47bfd7e05032f3a444057d3e9e5676d054e0be"
-  integrity sha512-gvCdm1pOqbq2gdHwjl2BiTGh46Y3aBvHjSeaAhyDEshZ/tmD88HfUqLSp7mnp4yxp7dkCHCbiMq4uF8yD9HJhQ==
+"@fbcnms/types@^0.1.10":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@fbcnms/types/-/types-0.1.11.tgz#11b6d53fffccd26925fbfa64d9a308db6beafdfb"
+  integrity sha512-fcSBUZpanxECQcqEiMa91ZktkP9tIkINmyTp0TcUCXyFbdkwu3aOxxXTR6cBD43YKvX885J5Oc7N+MPeZjTVgw==
 
-"@fbcnms/ui@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@fbcnms/ui/-/ui-0.1.2.tgz#d318ba0af1a37e75ec1461701585c5d9d8ae4b62"
-  integrity sha512-yhUMADRb/DdPYiQ70ir6Tll15GfnIrSJX9AkOCQkRBIqm5dkebSuXInzI0qnu3FtCJEkLc8AjdSOJkRvv6obUA==
+"@fbcnms/ui@^0.1.4":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@fbcnms/ui/-/ui-0.1.9.tgz#4290e995ee0a125b36a110037f39b23e6fc9748e"
+  integrity sha512-L5JWofXQTBzKyJwJU/9m9UIDc6U5Gdn2pNUPaiPPKR+CRfGOYRb5I8Yr37N9BGHbq6iWlfnXMmMsRS0bo7Pszg==
   dependencies:
     "@material-ui/core" "^4.0.0"
     "@material-ui/icons" "^4.0.0"
@@ -1634,7 +1634,7 @@
     beaver-logger "^4.0.12"
     immutable "^4.0.0-rc.12"
     mapbox-gl "^0.53.0"
-    notistack "^0.8.5"
+    notistack "^1.0.3"
     react "^16.8.6"
     react-autosuggest "^9.4.3"
     react-chartjs-2 "^2.7.4"
@@ -3286,18 +3286,17 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@^9.8.6:
-  version "9.8.6"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.6.tgz#3b73594ca1bf9266320c5acf1588d74dea74210f"
-  integrity sha512-XrvP4VVHdRBCdX1S3WXVD8+RyG9qeb1D5Sn1DeLiG2xfSpzellk5k54xbUERJ3M5DggQxes39UGOTP8CFrEGbg==
+autoprefixer@^7.1.6:
+  version "7.2.6"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.6.tgz#256672f86f7c735da849c4f07d008abb056067dc"
+  integrity sha512-Iq8TRIB+/9eQ8rbGhcP7ct5cYb/3qjNYAR2SnzLCEcwF6rvVOax8+9+fccgXk4bEhQGjOZd5TLhsksmAdsbGqQ==
   dependencies:
-    browserslist "^4.12.0"
-    caniuse-lite "^1.0.30001109"
-    colorette "^1.2.1"
+    browserslist "^2.11.3"
+    caniuse-lite "^1.0.30000805"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
-    postcss "^7.0.32"
-    postcss-value-parser "^4.1.0"
+    postcss "^6.0.17"
+    postcss-value-parser "^3.2.3"
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -3321,6 +3320,13 @@ axios@^0.18.0:
   dependencies:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
+
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
 
 axobject-query@^2.1.2:
   version "2.2.0"
@@ -3865,6 +3871,14 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
+browserslist@^2.11.3:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
+  integrity sha512-yWu5cXT7Av6mVwzWc8lMsJMHWn4xyjSuGYi4IozbVTLUOEYPSagUB8kiMDUHA1fS3zjr8nkxkn9jdvug4BBRmA==
+  dependencies:
+    caniuse-lite "^1.0.30000792"
+    electron-to-chromium "^1.3.30"
+
 browserslist@^4.12.0, browserslist@^4.8.5:
   version "4.12.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.12.2.tgz#76653d7e4c57caa8a1a28513e2f4e197dc11a711"
@@ -4380,7 +4394,7 @@ cls-bluebird@^2.1.0:
     is-bluebird "^1.0.2"
     shimmer "^1.1.0"
 
-clsx@^1.0.1, clsx@^1.0.2, clsx@^1.0.4:
+clsx@^1.0.1, clsx@^1.0.2, clsx@^1.0.4, clsx@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
   integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
@@ -4457,11 +4471,6 @@ color@3.0.x:
   dependencies:
     color-convert "^1.9.1"
     color-string "^1.5.2"
-
-colorette@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.1.tgz#4d0b921325c14faf92633086a536db6e89564b1b"
-  integrity sha512-puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw==
 
 colors@^1.2.1:
   version "1.4.0"
@@ -6525,6 +6534,11 @@ follow-redirects@^1.0.0:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
   integrity sha512-tmRv0AVuR7ZyouUHLeNSiO6pqulF7dYa3s19c6t+wz9LD69/uSzdMxJ2S91nTI9U3rt/IldxpzMOFejp6f0hjg==
+
+follow-redirects@^1.10.0:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.2.tgz#dd73c8effc12728ba5cf4259d760ea5fb83e3147"
+  integrity sha512-6mPTgLxYm3r6Bkkg0vNM0HTjfGrOEtsfbhagQvbxDEsEkpNhw582upBaoRZylzen6krEmxXJgt9Ju6HiI4O7BA==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -9823,6 +9837,14 @@ notistack@^0.8.5:
     prop-types "^15.7.2"
     react-is "^16.8.6"
 
+notistack@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/notistack/-/notistack-1.0.4.tgz#67360d5e2d6a56e8d46547e1cb29a188256fe9ac"
+  integrity sha512-Ia069wZCMXom77BC8BS9UAWCWsHn35NrxHwo6RLiF2vhNNXRj2aVEK9tf8L8e5IHKMHEXLGqD5i6K/U2iSOILw==
+  dependencies:
+    clsx "^1.1.0"
+    hoist-non-react-statics "^3.3.0"
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -10593,17 +10615,12 @@ postcss-modules-values@^1.3.0:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-value-parser@^3.3.0:
+postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
-postcss-value-parser@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
-  integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
-
-postcss@^6.0.1, postcss@^6.0.23:
+postcss@^6.0.1, postcss@^6.0.17, postcss@^6.0.23:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==
