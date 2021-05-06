@@ -24,7 +24,7 @@ require (
 	github.com/facebookincubator/ent v0.0.0-20191128071424-29c7b0a0d805
 	github.com/facebookincubator/prometheus-configmanager v0.0.0-20200717220759-a8282767b087
 	github.com/go-openapi/analysis v0.18.0 // indirect
-	github.com/go-openapi/errors v0.19.2
+	github.com/go-openapi/errors v0.20.0
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
 	github.com/go-openapi/jsonreference v0.18.0 // indirect
 	github.com/go-openapi/loads v0.18.0 // indirect
@@ -53,7 +53,7 @@ require (
 	github.com/prometheus/prometheus v0.0.0-20190607092147-e23fa22233cf
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/viper v1.3.1 // indirect
-	github.com/stretchr/testify v1.4.0
+	github.com/stretchr/testify v1.6.1
 	github.com/thoas/go-funk v0.7.0
 	github.com/toqueteos/webbrowser v1.1.0 // indirect
 	github.com/vektra/mockery v0.0.0-20181123154057-e78b021dcbb5
